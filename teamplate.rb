@@ -18,11 +18,12 @@ gem "bootstrap_form"
 generate "bootstrap:install", "static"
 generate "bootstrap:layout" # auto overwrite
 
+# Figaro
 # Other gems
-%w( quiet_assets pg ).each { |name| gem name }
+%w( quiet_assets pg rails-erd figaro).each { |name| gem name }
 
 gem_group :development, :test do
-  %w( pry-rails better_errors binding_of_caller ).each do |name|
+  %w( pry-rails better_errors binding_of_caller rspec-rails).each do |name|
     gem name
   end
 end
